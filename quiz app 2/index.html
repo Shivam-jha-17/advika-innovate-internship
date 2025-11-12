@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Quiz App - भारत क्विज</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Username Input Screen -->
+    <div id="username-screen" class="screen active">
+        <div class="username-container">
+            <h1>🇮🇳 India Quiz App</h1>
+            <p style="color: #666; margin-bottom: 20px;">Test your knowledge about India's History, Present & Future</p>
+            <div class="input-group">
+                <input type="text" id="username-input" placeholder="Enter your name" maxlength="20">
+                <button id="start-btn" class="btn-primary">Start Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="screen">
+        <!-- Header with Profile and Scoreboard -->
+        <header class="quiz-header">
+            <div class="user-profile">
+                <div class="profile-icon">🇮🇳</div>
+                <div class="profile-info">
+                    <span class="profile-name" id="username-display">User</span>
+                    <span class="profile-subtitle">Quiz Master</span>
+                </div>
+            </div>
+            <div class="scoreboard">
+                <div class="score-item">
+                    <div class="score-icon">🏆</div>
+                    <div class="score-details">
+                        <span class="score-label">Score</span>
+                        <span class="score-value" id="current-score">0</span>
+                    </div>
+                </div>
+                <div class="score-item">
+                    <div class="score-icon">❓</div>
+                    <div class="score-details">
+                        <span class="score-label">Question</span>
+                        <span class="score-value"><span id="question-number">1</span>/10</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <!-- Quiz Content -->
+        <main class="quiz-container">
+            <div class="question-card">
+                <div class="question-number-badge">Question <span id="question-num">1</span></div>
+                <h2 id="question-text" class="question-text">Loading question...</h2>
+                <div id="options-container" class="options-container">
+                    <!-- Options will be dynamically generated -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="results-screen" class="screen">
+        <div class="results-container">
+            <h1>Quiz Completed! 🇮🇳🎉</h1>
+            <p style="color: #666; margin-bottom: 20px;">Great job testing your knowledge about India!</p>
+            <div class="results-card">
+                <div class="result-stat">
+                    <span class="stat-label">Total Questions:</span>
+                    <span class="stat-value" id="total-questions">10</span>
+                </div>
+                <div class="result-stat">
+                    <span class="stat-label">Correct Answers:</span>
+                    <span class="stat-value correct" id="correct-answers">0</span>
+                </div>
+                <div class="result-stat">
+                    <span class="stat-label">Wrong Answers:</span>
+                    <span class="stat-value wrong" id="wrong-answers">0</span>
+                </div>
+                <div class="result-stat highlight">
+                    <span class="stat-label">Final Score:</span>
+                    <span class="stat-value" id="final-score">0</span>
+                </div>
+            </div>
+            <div class="result-actions">
+                <button id="restart-btn" class="btn-primary">Play Again</button>
+                <button id="change-user-btn" class="btn-secondary">Change User</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
